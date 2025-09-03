@@ -30,10 +30,15 @@ const Agence = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         start: "top 28%",
-        end: "top -140%",
-        scrub: true,
+        end: "top -150%",
         pin: true,
-        markers: true,
+        pinSpacing:true,
+        pinReparent: true,
+        pinType:"transform",
+        scrub: 1,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        // markers: true,
         onUpdate: (self) => {
           let imageIndex = Math.min(
             Math.floor(self.progress * images.length),
@@ -45,7 +50,8 @@ const Agence = () => {
     });
   });
   return (
-    <div>
+    <div className="py-1">
+      <div>
       <div
         ref={imageDivRef}
         className="h-64 w-50 absolute top-1/2 left-[30%] transform  -translate-y-1/2 rounded-2xl overflow-hidden"
@@ -58,7 +64,7 @@ const Agence = () => {
         />
       </div>
       <div className="font-[font2] relative">
-        <div className="mt-[55vh]">
+        <div className="mt-[50vh]">
           <h1 className="text-center text-[19vw] uppercase leading-[18vw] font-bold">
             Soixan7e Douze
           </h1>
@@ -75,7 +81,7 @@ const Agence = () => {
           </p>
         </div>
       </div>
-
+     </div>
       <section className="h-screen bg-yellow-100"></section>
     </div>
   );

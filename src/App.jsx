@@ -1,7 +1,8 @@
-import {Routes as Router,Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Agence from './pages/Agence';
+import { Routes as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Agence from "./pages/Agence";
+
 const App = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const App = () => {
         <Route path="/agence" element={<Agence />} />
       </Router>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
