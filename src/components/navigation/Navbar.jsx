@@ -4,7 +4,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <div className="flex items-start justify-between fixed top-0 right-0 left-0 z-20">
-    <div className="w-34 pt-2 px-2">
+    <div className="w-34 pt-2 px-2 relative z-[999]">
     <svg className="w-full"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 103 44"
@@ -18,7 +18,6 @@ const Navbar = () => {
 
       <div onClick={() => setOpenMenu(!openMenu)}
       className="h-12 w-52 bg-black overlay relative">
-      
       </div>
 
       {openMenu && <FullScreenNavbar setOpenMenu={setOpenMenu}/>}

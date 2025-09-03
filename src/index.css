@@ -37,3 +37,46 @@ body
 {
     top: 0;
 }
+.slider {
+  animation: sliding-banner 40s linear infinite;
+  width: max-content; 
+  display: flex;
+}
+
+@keyframes sliding-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.show-banner{
+  position: relative;
+  overflow: hidden;
+}
+.show-banner::after{
+  content:"";
+  background-color: #D3FD50 ;
+  position: absolute;
+  top:-100%;
+  left:0%;
+  width: 100%;
+  height: 100%;
+  transition: top .4s ease-in-out;
+  z-index: 1;
+  transform-origin: center center;
+}
+.show-banner:hover::after
+{
+  top:0;
+}
+.banner
+{
+  z-index: 90;
+}
+.show-banner:hover .banner
+{
+  opacity: 1;
+}
