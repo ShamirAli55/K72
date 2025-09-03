@@ -17,3 +17,23 @@ body
 {
     overflow-x: hidden;
 }
+.overlay{
+    pointer-events: all;
+    cursor: pointer;
+}
+.overlay::after
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:-100%;
+  background-color: yellow;
+  cursor: pointer;
+  transition: top .15s ease-in-out;
+  pointer-events: none;
+}
+.overlay:hover::after
+{
+    top: 0;
+}
